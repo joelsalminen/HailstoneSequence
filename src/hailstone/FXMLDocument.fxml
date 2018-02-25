@@ -13,6 +13,6 @@
       <Button fx:id="substractOneButton" layoutX="69.0" layoutY="75.0" mnemonicParsing="false" onAction="#substractOne" text="- 1" />
       <Button fx:id="addFiveButton" layoutX="251.0" layoutY="75.0" mnemonicParsing="false" onAction="#addFive" text="+ 5" />
       <Button fx:id="subtractFiveButton" layoutX="8.0" layoutY="75.0" mnemonicParsing="false" onAction="#substractFive" text="- 5" />
-      <Label fx:id="numberInput" layoutX="123.0" layoutY="45.0" prefHeight="25.0" prefWidth="74.0" text="Label" textAlignment="CENTER" />
+      <Label fx:id="numberInputLabel" layoutX="123.0" layoutY="45.0" prefHeight="25.0" prefWidth="74.0" text="Label" textAlignment="CENTER" />
     </children>
 </AnchorPane>

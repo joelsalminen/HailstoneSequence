@@ -24,7 +24,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button goButton;
     @FXML
-    private Label numberInput;
+    private Label numberInputLabel;
     @FXML
     private Button addOneButton;
     @FXML
@@ -36,12 +36,14 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
+        Hailstone hail = new Hailstone(inputNumber);
+        
+        
     }
     @FXML
     private void addOne(ActionEvent event) {
         inputNumber++;
-        numberInput.setText(Integer.toString(inputNumber));
+        numberInputLabel.setText(Integer.toString(inputNumber));
     }
     
     @FXML
@@ -50,13 +52,13 @@ public class FXMLDocumentController implements Initializable {
         if (inputNumber < 1){
             inputNumber = 1;
         }
-        numberInput.setText(Integer.toString(inputNumber));
+        numberInputLabel.setText(Integer.toString(inputNumber));
     }
 
     @FXML
     private void addFive(ActionEvent event) {
         inputNumber += 5;
-        numberInput.setText(Integer.toString(inputNumber));
+        numberInputLabel.setText(Integer.toString(inputNumber));
     }
 
     @FXML
@@ -65,13 +67,13 @@ public class FXMLDocumentController implements Initializable {
         if (inputNumber < 1){
             inputNumber = 1;
         }
-        numberInput.setText(Integer.toString(inputNumber));
+        numberInputLabel.setText(Integer.toString(inputNumber));
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Hailstone hail = new Hailstone();
+        
         inputNumber = 1;
-        numberInput.setText(Integer.toString(inputNumber));
+        numberInputLabel.setText(Integer.toString(inputNumber));
     }
 }
