@@ -10,8 +10,16 @@ package hailstone;
  * @author Joel Salminen
  */
 public class Hailstone {
+    int[] hSequence;
+    Hailstone(){
+        hSequence = new int[500]; /* non-dynamic array for now */
+    }
     
-    private void Calculate(){}
-    public void getHailStone(){}
+    
+    
+    public void Calculate(int number){
+        
+            
+    }
     
 }
