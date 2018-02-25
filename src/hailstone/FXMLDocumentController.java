@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -34,11 +35,18 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button subtractFiveButton;
     
+    
+    
+    
+    
+    
     @FXML
     private void handleButtonAction(ActionEvent event) {
         Html html = new Html();
         Hailstone hailstone = new Hailstone(inputNumber);
         html.CreateHtmlFile(inputNumber, hailstone.GetSteps(), hailstone.GetSecondLargest());
+        //JOptionPane.showMessageDialog(null,"Eggs are not supposed to be green.");
+        
         
     }
     
@@ -51,8 +59,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void substractOne(ActionEvent event) {
         inputNumber--;
-        if (inputNumber < 1){
-            inputNumber = 1;
+        if (inputNumber < 2){
+            inputNumber = 2;
         }
         numberInputLabel.setText(Integer.toString(inputNumber));
     }
@@ -66,8 +74,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void substractFive(ActionEvent event) {
         inputNumber -= 5;
-        if (inputNumber < 1){
-            inputNumber = 1;
+        if (inputNumber < 2){
+            inputNumber = 2;
         }
         numberInputLabel.setText(Integer.toString(inputNumber));
     }
@@ -75,7 +83,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        inputNumber = 1;
+        inputNumber = 2;
         numberInputLabel.setText(Integer.toString(inputNumber));
     }
 }
