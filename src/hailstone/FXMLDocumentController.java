@@ -45,7 +45,7 @@ public class FXMLDocumentController implements Initializable {
         Html html = new Html();
         Hailstone hailstone = new Hailstone(inputNumber);
         html.CreateHtmlFile(inputNumber, hailstone.GetSteps(), hailstone.GetSecondLargest());
-        //JOptionPane.showMessageDialog(null,"Eggs are not supposed to be green.");
+        JOptionPane.showMessageDialog(null,"Calculations completed. A new webpage has been created.");
         
         
     }
