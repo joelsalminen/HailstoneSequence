@@ -16,9 +16,14 @@ public class Html {
 
     
     public void CreateHtmlFile(int input, int steps, int secondLargest){
-        String html = "<div><h1>This is test html</h1><p>Input: " + input +
-                " steps: " + steps + " second largest: " +secondLargest + "</p></div>";
-        File f = new File("test.html");
+        String html = "<!DOCTYPE html><html><head><title>Hailstone Sequence</title>" + 
+                "<link href=\"https://fonts.googleapis.com/css?family=Oswald\" " + 
+                "rel=\"stylesheet\"><link rel=\"stylesheet\" type=\"text/css\" "+
+                "href=\"website_style.css\"></head><body>" +
+                "<h1>Hailstone Sequence</h1><div><p>Original input: " + input +
+                "</p> <p>Number of steps required: " + steps + "</p> <p>Second largest number in the sequence: " +secondLargest + 
+                "</p></div></body></html>";
+        File f = new File("src/hailstone/webpage/hailstone.html");
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(f));
             bw.write(html);
