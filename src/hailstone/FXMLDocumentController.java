@@ -11,7 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 
 
 /**
@@ -24,7 +24,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button goButton;
     @FXML
-    private TextField numberInput;
+    private Label numberInput;
     @FXML
     private Button addOneButton;
     @FXML
@@ -40,19 +40,32 @@ public class FXMLDocumentController implements Initializable {
     }
     @FXML
     private void addOne(ActionEvent event) {
-        
+        inputNumber++;
+        numberInput.setText(Integer.toString(inputNumber));
     }
     
     @FXML
     private void substractOne(ActionEvent event) {
+        inputNumber--;
+        if (inputNumber < 1){
+            inputNumber = 1;
+        }
+        numberInput.setText(Integer.toString(inputNumber));
     }
 
     @FXML
     private void addFive(ActionEvent event) {
+        inputNumber += 5;
+        numberInput.setText(Integer.toString(inputNumber));
     }
 
     @FXML
     private void substractFive(ActionEvent event) {
+        inputNumber -= 5;
+        if (inputNumber < 1){
+            inputNumber = 1;
+        }
+        numberInput.setText(Integer.toString(inputNumber));
     }
     
     @Override
