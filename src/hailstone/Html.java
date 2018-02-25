@@ -14,7 +14,8 @@ import java.util.logging.Logger;
 public class Html {
     
 
-    public Html(int input, int steps, int secondLargest) {
+    
+    public void CreateHtmlFile(int input, int steps, int secondLargest){
         String html = "<div><h1>This is test html</h1><p>Input: " + input +
                 " steps: " + steps + " second largest: " +secondLargest + "</p></div>";
         File f = new File("test.html");
