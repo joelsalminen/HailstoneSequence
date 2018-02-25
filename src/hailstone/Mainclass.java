@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Solid
+ * @author Joel Salminen
  */
 public class Mainclass extends Application {
     
@@ -24,6 +24,9 @@ public class Mainclass extends Application {
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
+        stage.setTitle("Hailstone Sequence");
+        
+        scene.getStylesheets().add(Mainclass.class.getResource("styles/app_style.css").toExternalForm());
         stage.show();
     }
 
