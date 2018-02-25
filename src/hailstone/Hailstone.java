@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Hailstone {
     
-    ArrayList<Integer> hSequence;
+    ArrayList<Integer> hSequence; /* Length of the sequence is unknown, arraylist works well here */
     Hailstone(){
         this.hSequence = new ArrayList<>();
         
@@ -25,12 +25,18 @@ public class Hailstone {
  /*       hSequence.add(5);
         hSequence.add(1);
         System.out.println(hSequence.indexOf(1));
-        /*while (true){
-            if (number == 1){
-                
-            }
+         */
+        hSequence.add(number);
+        if (number == 1){
+          System.out.println(hSequence);
+        }
+        else if (number%2 == 0){
+            this.Calculate(number/2);
+        }
+        else if (number%2 == 1){
             
-        }*/
+            this.Calculate(3*number + 1);
+        }
+        
     }
-    
 }
