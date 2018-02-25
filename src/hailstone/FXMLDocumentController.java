@@ -16,7 +16,7 @@ import javafx.scene.control.Label;
 
 /**
  *
- * @author Solid
+ * @author Joel Salminen
  */
 public class FXMLDocumentController implements Initializable {
     int inputNumber;
@@ -36,10 +36,12 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        Hailstone hail = new Hailstone(inputNumber);
-        
+        Html html = new Html();
+        Hailstone hailstone = new Hailstone(inputNumber);
+        html.CreateHtmlFile(inputNumber, hailstone.GetSteps(), hailstone.GetSecondLargest());
         
     }
+    
     @FXML
     private void addOne(ActionEvent event) {
         inputNumber++;
