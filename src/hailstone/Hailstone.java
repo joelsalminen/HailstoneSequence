@@ -34,15 +34,19 @@ public class Hailstone {
     
     public int GetSecondLargest(){
         /* Copying hSequence to a new Arraylist */
-        ArrayList<Integer> tempList = new ArrayList<>(hSequence); 
+        if (hSequence.size() >0){
+            ArrayList<Integer> tempList = new ArrayList<>(hSequence); 
         
-        /* Sorting and reversing the new list*/
-        Collections.sort(tempList);
-        Collections.reverse(tempList);
+            /* Sorting and reversing the new list*/
+            Collections.sort(tempList);
+            Collections.reverse(tempList);
         
-        /*System.out.println(tempList);*/
+            return (tempList.get(1));
+        }
+        return 1;
         
-        return (tempList.get(1));
+        
+        
     }
     
     public int GetSteps(){
