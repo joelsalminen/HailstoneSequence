@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hailstone;
 
 import java.util.ArrayList;
@@ -37,7 +32,7 @@ public class Hailstone {
         
     }
     
-    public int GetPenultimateInt(){
+    public int GetSecondLargest(){
         /* Copying hSequence to a new Arraylist */
         ArrayList<Integer> tempList = new ArrayList<>(hSequence); 
         
