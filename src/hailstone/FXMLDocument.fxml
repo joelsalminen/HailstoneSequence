@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hailstone.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="397.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hailstone.FXMLDocumentController">
     <children>
-        <Button fx:id="goButton" layoutX="128.0" layoutY="125.0" onAction="#handleButtonAction" text="Click Me!" />
-      <Button fx:id="addOneButton" layoutX="210.0" layoutY="75.0" mnemonicParsing="false" onAction="#addOne" text="+ 1" />
-      <Button fx:id="substractOneButton" layoutX="69.0" layoutY="75.0" mnemonicParsing="false" onAction="#substractOne" text="- 1" />
-      <Button fx:id="addFiveButton" layoutX="251.0" layoutY="75.0" mnemonicParsing="false" onAction="#addFive" text="+ 5" />
-      <Button fx:id="subtractFiveButton" layoutX="8.0" layoutY="75.0" mnemonicParsing="false" onAction="#substractFive" text="- 5" />
-      <Label fx:id="numberInputLabel" layoutX="123.0" layoutY="45.0" prefHeight="25.0" prefWidth="74.0" text="Label" textAlignment="CENTER" />
+        <Button fx:id="goButton" layoutX="152.0" layoutY="269.0" onAction="#handleButtonAction" prefHeight="56.0" prefWidth="337.0" text="Calculate Hailstone">
+         <font>
+            <Font size="26.0" />
+         </font></Button>
+      <Button fx:id="addOneButton" layoutX="394.0" layoutY="135.0" mnemonicParsing="false" onAction="#addOne" prefHeight="75.0" prefWidth="75.0" text="+1">
+         <font>
+            <Font size="26.0" />
+         </font></Button>
+      <Button fx:id="substractOneButton" layoutX="180.0" layoutY="135.0" mnemonicParsing="false" onAction="#substractOne" prefHeight="75.0" prefWidth="75.0" text="- 1">
+         <font>
+            <Font size="26.0" />
+         </font></Button>
+      <Button fx:id="addFiveButton" layoutX="505.0" layoutY="135.0" mnemonicParsing="false" onAction="#addFive" prefHeight="75.0" prefWidth="75.0" text="+5">
+         <font>
+            <Font size="26.0" />
+         </font></Button>
+      <Button fx:id="subtractFiveButton" layoutX="63.0" layoutY="135.0" mnemonicParsing="false" onAction="#substractFive" prefHeight="75.0" prefWidth="75.0" text="- 5">
+         <font>
+            <Font size="26.0" />
+         </font></Button>
+      <Label fx:id="numberInputLabel" alignment="CENTER" layoutX="297.0" layoutY="136.0" prefHeight="51.0" prefWidth="52.0" text="1" textAlignment="CENTER">
+         <font>
+            <Font size="42.0" />
+         </font></Label>
     </children>
+    
 </AnchorPane>

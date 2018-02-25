@@ -11,6 +11,8 @@ import java.util.logging.Logger;
  *
  * @author Joel Salminen
  */
+
+/* Creates an html webpage */
 public class Html {
     
 
@@ -23,6 +25,7 @@ public class Html {
                 "<h1>Hailstone Sequence</h1><div><p>Original input: " + input +
                 "</p> <p>Number of steps required: " + steps + "</p> <p>Second largest number in the sequence: " +secondLargest + 
                 "</p></div></body></html>";
+        
         File f = new File("src/hailstone/webpage/hailstone.html");
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(f));

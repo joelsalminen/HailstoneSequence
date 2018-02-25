@@ -21,6 +21,7 @@ import javax.swing.JOptionPane;
  */
 public class FXMLDocumentController implements Initializable {
     int inputNumber;
+    int min = 2;
 
     @FXML
     private Button goButton;
@@ -37,17 +38,17 @@ public class FXMLDocumentController implements Initializable {
     
     
     
-    
-    
-    
     @FXML
     private void handleButtonAction(ActionEvent event) {
         Html html = new Html();
+        /* Calculating hailstone sequence: */
         Hailstone hailstone = new Hailstone(inputNumber);
+        
+        /* Updating html file: */
         html.CreateHtmlFile(inputNumber, hailstone.GetSteps(), hailstone.GetSecondLargest());
-        JOptionPane.showMessageDialog(null,"Calculations completed. A new webpage has been created.");
         
-        
+        /* Opening a popup window: */
+        JOptionPane.showMessageDialog(null,"Calculations completed. Webpage has been updated.");
     }
     
     @FXML
@@ -59,8 +60,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void substractOne(ActionEvent event) {
         inputNumber--;
-        if (inputNumber < 2){
-            inputNumber = 2;
+        if (inputNumber < min){ /* this is to avoid negative inputs */
+            inputNumber = min;
         }
         numberInputLabel.setText(Integer.toString(inputNumber));
     }
@@ -74,8 +75,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void substractFive(ActionEvent event) {
         inputNumber -= 5;
-        if (inputNumber < 2){
-            inputNumber = 2;
+        if (inputNumber < min){ /* this is to avoid negative inputs */
+            inputNumber = min;
         }
         numberInputLabel.setText(Integer.toString(inputNumber));
     }
@@ -83,7 +84,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        inputNumber = 2;
+        inputNumber = 5; /* Default value */
         numberInputLabel.setText(Integer.toString(inputNumber));
     }
 }
