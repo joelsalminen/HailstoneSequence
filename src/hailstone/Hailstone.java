@@ -5,21 +5,32 @@
  */
 package hailstone;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Joel Salminen
  */
 public class Hailstone {
-    int[] hSequence;
+    
+    ArrayList<Integer> hSequence;
     Hailstone(){
-        hSequence = new int[500]; /* non-dynamic array for now */
+        this.hSequence = new ArrayList<>();
+        
     }
     
     
     
     public void Calculate(int number){
-        
+ /*       hSequence.add(5);
+        hSequence.add(1);
+        System.out.println(hSequence.indexOf(1));
+        /*while (true){
+            if (number == 1){
+                
+            }
             
+        }*/
     }
     
 }
