@@ -6,6 +6,7 @@
 package hailstone;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -22,13 +23,10 @@ public class Hailstone {
     
     
     public void Calculate(int number){
- /*       hSequence.add(5);
-        hSequence.add(1);
-        System.out.println(hSequence.indexOf(1));
-         */
+
         hSequence.add(number);
         if (number == 1){
-          System.out.println(hSequence);
+          //System.out.println(hSequence);
         }
         else if (number%2 == 0){
             this.Calculate(number/2);
@@ -38,5 +36,18 @@ public class Hailstone {
             this.Calculate(3*number + 1);
         }
         
+    }
+    
+    public int GetPenultimateInt(){
+        /* Copying hSequence to a new Arraylist */
+        ArrayList<Integer> tempList = new ArrayList<>(hSequence); 
+        
+        /* Sorting and reversing the new list*/
+        Collections.sort(tempList);
+        Collections.reverse(tempList);
+        
+        System.out.println(tempList);
+        
+        return (tempList.get(1));
     }
 }
