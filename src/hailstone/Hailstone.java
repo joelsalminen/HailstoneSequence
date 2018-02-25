@@ -10,9 +10,9 @@ import java.util.Collections;
 public class Hailstone {
     
     ArrayList<Integer> hSequence; /* Length of the sequence is unknown, arraylist works well here */
-    Hailstone(){
+    Hailstone(int inputNumber){
         this.hSequence = new ArrayList<>();
-        
+        Calculate(inputNumber);
     }
     
     
