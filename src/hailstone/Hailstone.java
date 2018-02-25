@@ -32,7 +32,6 @@ public class Hailstone {
             this.Calculate(number/2);
         }
         else if (number%2 == 1){
-            
             this.Calculate(3*number + 1);
         }
         
@@ -46,8 +45,12 @@ public class Hailstone {
         Collections.sort(tempList);
         Collections.reverse(tempList);
         
-        System.out.println(tempList);
+        /*System.out.println(tempList);*/
         
         return (tempList.get(1));
+    }
+    
+    public int GetSteps(){
+        return hSequence.size()-1;
     }
 }
