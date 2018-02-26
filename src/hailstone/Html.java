@@ -21,12 +21,12 @@ public class Html {
         String html = "<!DOCTYPE html><html><head><title>Hailstone Sequence</title>" + 
                 "<link href=\"https://fonts.googleapis.com/css?family=Oswald\" " + 
                 "rel=\"stylesheet\"><link rel=\"stylesheet\" type=\"text/css\" "+
-                "href=\"website_style.css\"></head><body>" +
+                "href=\"src/hailstone/webpage/webpage_style.css\"></head><body>" +
                 "<h1>Hailstone Sequence</h1><div><p>Original input: " + input +
                 "</p> <p>Number of steps required: " + steps + "</p> <p>Second largest number in the sequence: " +secondLargest + 
                 "</p></div></body></html>";
         
-        File f = new File("src/hailstone/webpage/hailstone.html");
+        File f = new File("hailstone.html");
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(f));
             bw.write(html);
